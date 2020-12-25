@@ -7,6 +7,49 @@ and open the template in the editor.
     Created on : 25-dic-2020, 17:46:17
     Author     : SNG_X
 */
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    color: white;
+    font-family: 'calibri';
+}
 
+header {
+    background: url('img/logo.PNG');
+    height: 450px;
+    background: activeborder;
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
 
+body {
+    margin: 0;
+    padding: 60px 0 0 0;
+}
+ 
+#page {
+    margin: 0px auto;
+    width: 100%;
+}
+ 
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #333;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+ 
+#content {
+    height: 100%;
+    overflow: auto;
+    padding: 0% 1% 0% 1%;
+    width: 98%;
+}
