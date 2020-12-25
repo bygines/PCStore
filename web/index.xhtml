@@ -20,16 +20,31 @@
                 <div id="header">
                     <img src="img/logo.PNG"/>
                 </div>
-                <p></p>
-                <div id="content"> 
-                    <h1>Bienvenido</h1>
-                    <a href="#">Crear Cuenta</a>
-                    <a href="#">Ingresar</a>
-                </div>
             </div>
         </header>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        
+        <main id="login">
+            <h:form class="form">
+                <p style="color: greenyellow; font-family: Verdana;">Login</p>
+                <h:panelGrid>
+                        <h:outputLabel value="Usuario: " style="font-weight:bold"/>
+                        <h:inputText value="#{test.user}"
+                                     required="true"
+                                     requiredMessage="Error: Introduce el usuario"/>
+                        <h:outputLabel value="Contraseña: " style="font-weight:bold" />
+                        <h:inputSecret value="#{test.pwd}"
+                                       required="true"
+                                       requiredMessage="Error: introduce la contraseña"/>   
+                        <h:commandButton id="submit" value="Login" action="respuesta" />
+                        <h:commandButton id="reset" value="Clear" action="reset" /> 
+                </h:panelGrid>
+            </h:form>
+        </main>
+        
+        <footer id="footer">
+            <p>©Copyright 2020/2020 Ginés. Todos los derechos reservados.</p>
+        </footer>
+        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
