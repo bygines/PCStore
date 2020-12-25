@@ -22,10 +22,9 @@
                 </div>
             </div>
         </header>
-        
-        <main id="login">
-            <h:form class="form">
-                <p style="color: greenyellow; font-family: Verdana;">Login</p>
+        <div id="login">
+            <h:form>
+                <p style="color: #666666; font-family: Verdana;">Login</p>
                 <h:panelGrid>
                         <h:outputLabel value="Usuario: " style="font-weight:bold"/>
                         <h:inputText value="#{test.user}"
@@ -35,12 +34,12 @@
                         <h:inputSecret value="#{test.pwd}"
                                        required="true"
                                        requiredMessage="Error: introduce la contraseña"/>   
+                        <p></p>
                         <h:commandButton id="submit" value="Login" action="respuesta" />
                         <h:commandButton id="reset" value="Clear" action="reset" /> 
                 </h:panelGrid>
             </h:form>
-        </main>
-        
+        </div>
         <footer id="footer">
             <p>©Copyright 2020/2020 Ginés. Todos los derechos reservados.</p>
         </footer>
