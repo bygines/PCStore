@@ -1,50 +1,62 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 25-dic-2020, 17:46:17
-    Author     : SNG_X
-*/
-
-body {
-    font-family: 'calibri';
+body,html {
+    font-family: Garamond, serif;
+    height: 100%;
+    margin: 0;
+    padding: 0 ;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-#page {
-    margin: 0px auto;
-    width: 100%;
+.form-box {
+    width: 400px; /*300*/
+    padding: 100px; /*40*/
+    background: #191919; /* Fondo recuadro login */
+    text-align: center;
+    border-radius: 15px;
 }
 
-#header {
-    top: 0;
-    width: 100%;
-    padding: 15px 20px;
-    background-color: #ffffff;
-    font-size: 20px;
+.form-title {
+    color: #5352ed;
+    text-transform: uppercase; /* Cambia a mayusculas 'Login'*/
+    font-weight: 500;
+}
+
+.buttons { /*no funciona*/
+    background: #5352ed;
+}
+
+.inputText {
+    background: #191919;
+    color: #ffffff;
+    border-radius: 15px;
+    border: 3px solid #5352ed;
+}
+
+.inputPassword {
+    background: #191919;
+    color: #ffffff;
+    border-radius: 15px;
+    border: 3px solid #5352ed;
+}
+
+.text {
     color: #ffffff;
 }
 
-#login {
-    background: #fafafa;
-    height: 150px;
-    margin: 1rem;
-    padding: 1rem;
-    border: 2px solid #ccc; 
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.password {
+    color: #ffffff;
 }
 
-#footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #666666;
-    color: white;
-    text-align: center;
+.language {
+    color: #5352ed;
 }
 
+.langu {
+    background: #ffffff;
+    color: #191919;
+}

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      <link type="text/css" href="css/style.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <h:head>
+        <meta charset="utf-8" /> 
+        <meta  name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/> 
+        <!-- Bootstrap CSS "/>-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+              crossorigin="anonymous"/>
+        <title>Login PCStore</title>
+    </h:head>
+    
+    <h:body> 
+        <h:form class="form-box animated fadeInUp">
+            
+            <h:panelGrid>
+                <p class="form-title">Login</p>
+                
+                <h:inputText class="inputText"
+                             a:placeholder="Usuario"
+                             value="#{log.user}"
+                             required="true"
+                             requiredMessage="Introduce el usuario"/>
+                <h:inputSecret class="inputPassword"
+                               a:placeholder="Contraseña"
+                               value="#{log.pwd}"
+                               required="true"
+                               requiredMessage="Introduce la contraseña"/>   
+                
+                <p></p>
+                
+                <h:outputLabel class="language" value="Idioma"/>
+                <select class="langu"
+                        name="idioma"
+                        required="true"
+                        requiredMessage="Introduce la contraseña">
+                    <option value="1">Español</option>
+                    <option value="2">Ingles</option>
+                </select>
+                
+                <p></p>
+                
+                <h:commandButton class="buttons" type="submit" value="Login" action="respuesta" />
+                <h:commandButton class="buttons" type="reset" value="Clear" action="reset" /> 
+                
+            </h:panelGrid>
+            
+        </h:form>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </h:body>
+      
+</html>
+
