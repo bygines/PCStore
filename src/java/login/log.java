@@ -1,10 +1,10 @@
 package login;
 
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 @Named(value = "log")
-@ApplicationScoped
+@RequestScoped
 public class log {
     private String user,pwd,language;
     
