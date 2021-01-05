@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     
-    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    <link type="text/css" href="css/select.css" rel="stylesheet"/>
     
     <head>
         <title>PCstore</title>
@@ -17,7 +17,6 @@
     </head>
     
     <body>
-
         <nav class="navbar navbar-expand-sm .bg-light .navbar-light fixed-top">
             <img src="img/logo.PNG"/>
             <nav class="navbar navbar-expand-sm bg-light navbar-light">
@@ -25,18 +24,18 @@
                 <h:commandButton class="navbutton" type="reset" value="Ingles" action="reset" /> 
             </nav>
         </nav>
-
-        <div class="container-fluid">
-            <h:form>
-                <h:outputLabel value="Selecciona la configuración: "/>
-                <p></p>
-                <h:selectOneMenu value="#{cpu}">
-                    <f:selectItem itemValue="1" itemLabel="AMD Socket AM4"/>
-                    <f:selectItem itemValue="2" itemLabel="Intel Socket LGA 1200 10 Gen" />
-                </h:selectOneMenu>
-            </h:form>
+        
+        <div class="img">
+            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="CPU" />
+            <img style="width:300px; height:300px;" src="img/cpu.jpg"/>
+            <p></p>
+            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="RAM" />
+            <img style="width:300px; height:300px;" src="img/memoria.jpg"/>
+            <p></p>
+            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Disco Duro" />
+            <img style="width:300px; height:300px;" src="img/discoduro.jpg"/>
         </div>
-
-    </body>
+        
+    </body> 
     
 </html>

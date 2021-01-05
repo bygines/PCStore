@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    
+    <head>
+        <title>PCstore</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm .bg-light .navbar-light fixed-top">
+            <img src="img/logo.PNG"/>
+            <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <h:commandButton class="navbutton" type="submit" value="Castellano" action="respuesta"/>
+                <h:commandButton class="navbutton" type="reset" value="Ingles" action="reset" /> 
+            </nav>
+        </nav>
+        <div class="container-fluid">
+            <h:form>
+                <h1>Completa el formulario de pago: </h1>
+                
+                <div class="p-field p-grid">
+                    <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Cantidad" />
+                    <div class="p-col" value="">
+                        <h:inputText id="amount" value="#{log.amount}"/>
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Nº Tarjeta" />
+                    <div class="p-col">
+                        <h:inputText id="card" value="#{log.card}"/>
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Fecha Caducidad(mm/YY)" />
+                    <div class="p-col">
+                        <h:inputText id="caducity" value="#{log.caducity}"/>
+                    </div>
+                </div>
+                <p></p>
+                <h:commandButton class="" type="submit" value="Login" action="resume" />
+            </h:form>
+        </div>
+    </body>  
+</html>
