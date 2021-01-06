@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <link type="text/css" href="css/select.css" rel="stylesheet"/>
+    
+    <head>
+        <title>PCstore</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-expand-sm .bg-light .navbar-light fixed-top">
+            <img src="img/logo.PNG"/>
+            <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <h:commandButton class="navbutton" type="submit" value="Castellano" action="respuesta"/>
+                <h:commandButton class="navbutton" type="reset" value="Ingles" action="reset" /> 
+            </nav>
+        </nav>
+        
+        <div class="productos">
+            
+            <div class="row">
+                
+                <h:form>
+                   
+                    <h:outputLabel value="Selecciona la configuración: "/>
+                    
+                    <p></p>
+                    
+                    <h:selectOneMenu value="#{log.cpu}">
+                        <f:selectItem itemValue="AMD Socket AM4" itemLabel="AMD Socket AM4"/>
+                        <f:selectItem itemValue="Intel Socket LGA 1200 10 Gen" itemLabel="Intel Socket LGA 1200 10 Gen" />
+                    </h:selectOneMenu>
+                    
+                    <p></p>
+                    
+                    <h:selectOneRadio value = "#{log.cpumodel}">
+                        <f:selectItem itemValue = "i3" itemLabel = "i3" />
+                        <f:selectItem itemValue = "i5" itemLabel = "i5" />
+                        <f:selectItem itemValue = "i7" itemLabel = "i7" />
+                        <f:selectItem itemValue = "Ryzen 3" itemLabel = "Ryzen 3" />
+                        <f:selectItem itemValue = "Ryzen 5" itemLabel = "Ryzen 5" />
+                        <f:selectItem itemValue = "Ryzen 7" itemLabel = "Ryzen 7" />
+                    </h:selectOneRadio> 
+                    
+                    <h:commandButton id="back" value="Back" action="respuesta" />
+                    
+                </h:form>
+                
+            </div>
+        </div>
+        
+    </body> 
+    
+</html>

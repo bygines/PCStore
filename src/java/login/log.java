@@ -6,7 +6,7 @@ import javax.inject.Named;
 @Named(value = "log")
 @RequestScoped
 public class log {
-    private String user,pwd,language,card,caducity;
+    private String user,pwd,language,card,caducity,cpu,cpumodel;
     private int amount;
     
     public log() {
@@ -18,6 +18,22 @@ public class log {
 
     public int getAmount() {
         return amount;
+    }
+
+    public String getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(String cpu) {
+        this.cpu = cpu;
+    }
+
+    public String getCpumodel() {
+        return cpumodel;
+    }
+
+    public void setCpumodel(String cpumodel) {
+        this.cpumodel = cpumodel;
     }
 
     public void setAmount(int amount) {
@@ -59,6 +75,5 @@ public class log {
     public void setCaducity(String caducity) {
         this.caducity = caducity;
     }
-    
     
 }

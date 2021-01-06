@@ -26,10 +26,6 @@
     font-weight: 500;
 }
 
-.buttons { /*no funciona*/
-    background: #5352ed;
-}
-
 .inputText {
     background: #191919;
     color: #ffffff;
@@ -44,14 +40,6 @@
     border: 3px solid #5352ed;
 }
 
-.text {
-    color: #ffffff;
-}
-
-.password {
-    color: #ffffff;
-}
-
 .language {
     color: #5352ed;
 }
@@ -61,7 +49,7 @@
     color: #191919;
 }
 
-.container-fluid {
-    justify-content: center;
-    align-items: center;
+.buttons {
+    background: #ffffff;
+    color: #191919;
 }

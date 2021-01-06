@@ -26,11 +26,6 @@
             <h:panelGrid>
                 <p class="form-title">Login</p>
                 
-                <h:inputText class="inputText"
-                             a:placeholder="Usuario"
-                             value="#{log.user}"
-                             required="true"
-                             requiredMessage="Introduce el usuario"/>
                 <h:inputSecret class="inputPassword"
                                a:placeholder="Contraseña"
                                value="#{log.pwd}"
@@ -40,10 +35,10 @@
                 <p></p>
                 
                 <h:outputLabel class="language" value="Idioma"/>
+                
                 <select class="langu"
                         name="idioma"
-                        required="true"
-                        requiredMessage="Introduce la contraseña">
+                        required="true">
                     <option value="1">Español</option>
                     <option value="2">Ingles</option>
                 </select>

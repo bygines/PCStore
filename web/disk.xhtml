@@ -26,25 +26,33 @@
             </nav>
         </nav>
         
-        <h:form>
-            <!-- Action Event propuesta de mejora no funciona
-            <p></p>
-            <h:commandButton image="img/cpu.jpg" 
-                             actionListener="" 
-                             action="" />
-            <p></p>-->
-            <p></p>
-            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="CPU" />
-            <h:commandLink action="cpu">
-                <h:graphicImage style="width:300px; height:300px;" value="img/cpu.jpg" />
-            </h:commandLink>
-            <p></p>
-            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="RAM" />
-            <img style="width:300px; height:300px;" src="img/memoria.jpg"/>
-            <p></p>
-            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Disco Duro" />
-            <img style="width:300px; height:300px;" src="img/discoduro.jpg"/>
-        </h:form>
+        <div class="productos">
+            
+            <div class="row">
+                
+                <h:form>
+                   
+                    <h:outputLabel value="Selecciona la configuración: "/>
+                    
+                    <p></p>
+                    
+                    <h:selectOneMenu value="#{cpu}">
+                        <f:selectItem itemValue="1" itemLabel="AMD Socket AM4"/>
+                        <f:selectItem itemValue="2" itemLabel="Intel Socket LGA 1200 10 Gen" />
+                    </h:selectOneMenu>
+                    
+                    <p></p>
+                    <h:outputLabel value="Procesador: "/>
+                    <h:selectOneRadio value = "#{cpumodel}">
+                        <f:selectItem itemValue = "1" itemLabel = "i3" />
+                        <f:selectItem itemValue = "2" itemLabel = "i5" />
+                        <f:selectItem itemValue = "3" itemLabel = "i7" />
+                    </h:selectOneRadio>  
+                    
+                </h:form>
+            
+            </div>
+        </div>
         
     </body> 
     
