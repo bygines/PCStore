@@ -36,18 +36,39 @@
                     
                     <p></p>
                     
-                    <h:selectOneMenu value="#{cpu}">
-                        <f:selectItem itemValue="AMD Socket AM4" itemLabel="AMD Socket AM4"/>
-                        <f:selectItem itemValue="2" itemLabel="Intel Socket LGA 1200 10 Gen" />
+                    <h:selectOneMenu value="#{log.marca}">
+                        <f:selectItem itemValue="cursoir" itemLabel="cursoir"/>
+                        <f:selectItem itemValue="B-data" itemLabel="B-data" />
                     </h:selectOneMenu>
                     
                     <p></p>
+                    
                     <h:outputLabel value="Procesador: "/>
-                    <h:selectOneRadio value = "#{cpumodel}">
-                        <f:selectItem itemValue = "1" itemLabel = "i3" />
-                        <f:selectItem itemValue = "2" itemLabel = "i5" />
-                        <f:selectItem itemValue = "3" itemLabel = "i7" />
+                    <h:selectOneRadio value = "#{log.capacidadRam}">
+                        <f:selectItem itemValue = "4 Gb" itemLabel = "4 Gb" />
+                        <f:selectItem itemValue = "8 Gb" itemLabel = "8 Gb" />
+                        <f:selectItem itemValue = "16 Gb" itemLabel = "16 Gb" />
+                        <f:selectItem itemValue = "32 Gb" itemLabel = "32 Gb" />
                     </h:selectOneRadio>  
+                    
+                    <p></p>
+                    
+                    <h:outputLabel value="Procesador: "/>
+                    <h:selectOneRadio value = "#{log.ramFormato}">
+                        <f:selectItem itemValue = "Ddr1" itemLabel = "Ddr" />
+                        <f:selectItem itemValue = "Ddr2" itemLabel = "Ddr2" />
+                        <f:selectItem itemValue = "Ddr3" itemLabel = "Ddr3" />
+                        <f:selectItem itemValue = "Ddr3" itemLabel = "Ddr4" />
+                    </h:selectOneRadio>  
+                    
+                    <h:inputText id="cpu" 
+                                 value="#{log.cpu}"
+                                 style="display:none;"/>
+                    <h:inputText id="cpumodel" 
+                               value="#{log.cpumodel}"
+                               style="display:none;"/>
+                    
+                    <h:commandButton id="volver" value="volver" action="index" />
                     
                 </h:form>
             

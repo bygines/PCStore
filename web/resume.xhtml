@@ -1,16 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    
     <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>PCstore</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
+    
     <body>
-        <div>TODO write content</div>
-    </body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">
+                <div class="card" style="width: 14rem;">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap"/>
+                    </div>
+                </div>
+            </a>
+            <h:commandButton class="navbutton" type="submit" value="Castellano" action="respuesta"/>
+            <h:commandButton class="navbutton" type="reset" value="Ingles" action="reset" /> 
+        </nav>
+        
+        <h:form>
+            
+            <h1>Informacion de compra</h1>
+            <h2>Configuración del sistema</h2>
+            
+            <hr class="mb-4"/>
+            
+            <h:outputLabel value="Procesador: "/>
+            <h6>Socket: #{log.cpu}</h6>
+            <h6>Modelo: #{log.cpumodel}</h6>
+            
+            <hr class="mb-4"/>
+            
+            <h:outputLabel value="Memoria Ram: "/>
+            <h6>Marca: #{log.marca}</h6>
+            <h6>Capacidad de la Ram: #{log.capacidadRam}</h6>
+            <h6>Formato: #{log.ramFormato}</h6>
+            
+            <hr class="mb-4"/>
+            
+            <h:outputLabel value="Disco duro: "/>
+            <h6>Tecnologia: #{log.tecnologia}</h6>
+            <h6>Capacidad de el disco duro: #{log.almacenamiento}</h6>
+            
+            <hr class="mb-4"/>
+            
+            <h1>Datos de facturación</h1>
+            <h6>Tipo de Tarjeta: #{log.credit}</h6>
+            <h6>Nombre de tarjeta: #{log.nameCard}</h6>
+            <h6>Numero ed tarjeta: #{log.numberCard}</h6>
+            <h6>Expiración: #{log.expiracion}</h6>
+            <h6>Cvv: #{log.cvv}</h6>
+            
+            <hr class="mb-4"/>
+            
+            <h:commandButton id="Comprar" value="Realizar Compra" action="index" />
+            
+        </h:form>
+
+        <footer class="bg-light text-center text-lg-start fixed-bottom">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2021 Copyright: 
+              <a class="text-dark" href="https://mdbootstrap.com/">Todos los derechos reservados</a>
+            </div>
+        </footer>
+        
+    </body> 
+    
 </html>

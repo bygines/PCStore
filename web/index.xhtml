@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     
-    <link type="text/css" href="css/select.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
     
     <head>
         <title>PCstore</title>
@@ -16,35 +17,91 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     
+    <ui:debug hotkey = "."/>
+    
     <body>
         
-        <nav class="navbar navbar-expand-sm .bg-light .navbar-light fixed-top">
-            <img src="img/logo.PNG"/>
-            <nav class="navbar navbar-expand-sm bg-light navbar-light">
-                <h:commandButton class="navbutton" type="submit" value="Castellano" action="respuesta"/>
-                <h:commandButton class="navbutton" type="reset" value="Ingles" action="reset" /> 
-            </nav>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">
+                <div class="card" style="width: 14rem;">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/logo.png" alt="Card image cap"/>
+                    </div>
+                </div>
+            </a>
+            <h:commandButton class="navbutton" type="submit" value="Castellano" action="respuesta"/>
+            <h:commandButton class="navbutton" type="reset" value="Ingles" action="reset" /> 
         </nav>
         
         <h:form>
-            <!-- Action Event propuesta de mejora no funciona
-            <p></p>
-            <h:commandButton image="img/cpu.jpg" 
-                             actionListener="" 
-                             action="" />
-            <p></p>-->
-            <p></p>
-            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="CPU" />
-            <h:commandLink action="cpu">
-                <h:graphicImage style="width:300px; height:300px;" value="img/cpu.jpg" />
-            </h:commandLink>
-            <p></p>
-            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="RAM" />
-            <img style="width:300px; height:300px;" src="img/memoria.jpg"/>
-            <p></p>
-            <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Disco Duro" />
-            <img style="width:300px; height:300px;" src="img/discoduro.jpg"/>
+            
+            <div class="contenedor">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/cpu.jpg" alt="Card image cap"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Procesador</h5>
+                      <p class="card-text"> </p>
+                      <h:commandLink class="btn btn-primary" action="cpu">Configurar</h:commandLink>
+                    </div>
+                </div>
+                
+                <h:inputText id="cpu" 
+                                 value="#{log.cpu}"
+                                 style="display:none;"/>
+                      <h:inputText id="cpumodel" 
+                                 value="#{log.cpumodel}"
+                                 style="display:none;"/>
+                
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/memoria.jpg" alt="Card image cap"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Memoria Ram</h5>
+                      <p class="card-text"> </p>
+                      <h:commandLink class="btn btn-primary" action="ram">Configurar</h:commandLink>
+                    </div>
+                </div>
+                      
+                <h:inputText id="marca" 
+                             value="#{log.marca}"
+                             style="display:none;"/>
+                <h:inputText id="capacidadRam" 
+                             value="#{log.capacidadRam}"
+                             style="display:none;"/>
+                <h:inputText id="formato" 
+                             value="#{log.ramFormato}"
+                             style="display:none;"/>
+                
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/discoduro.jpg" alt="Card image cap"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Disco Duro</h5>
+                      <p class="card-text"> </p>
+                      <h:commandLink class="btn btn-primary" action="disk">Configurar</h:commandLink>
+                    </div>
+                </div>
+                
+                <h:inputText id="tecnologia" 
+                             value="#{log.tecnologia}"
+                             style="display:none;"/>
+                <h:inputText id="almacenamiento" 
+                             value="#{log.almacenamiento}"
+                             style="display:none;"/>
+                
+            </div>
+            
+            <hr class="mb-4"/>
+            
+            <h:commandLink class="btn btn-primary" action="payment">Configurar</h:commandLink>
+            
         </h:form>
+
+        <footer class="bg-light text-center text-lg-start fixed-bottom">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2021 Copyright: 
+              <a class="text-dark" href="https://mdbootstrap.com/">Todos los derechos reservados</a>
+            </div>
+        </footer>
         
     </body> 
     

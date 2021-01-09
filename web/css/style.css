@@ -9,9 +9,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
+.logo {
+     font-size:35px; 
+     text-align: center;
+     align-items: center;
+     color : #ff0000;
+}
 .form-box {
     width: 400px; /*300*/
     padding: 100px; /*40*/
@@ -52,4 +57,17 @@
 .buttons {
     background: #ffffff;
     color: #191919;
+}
+
+.contenedor{
+    width: 100%;
+    height: auto;
+    display: flex !important;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contenedor .card {
+    padding: 10px;
+    margin: 10px;
 }

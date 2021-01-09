@@ -15,39 +15,99 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
+    
     <body>
-        <nav class="navbar navbar-expand-sm .bg-light .navbar-light fixed-top">
-            <img src="img/logo.PNG"/>
-            <nav class="navbar navbar-expand-sm bg-light navbar-light">
-                <h:commandButton class="navbutton" type="submit" value="Castellano" action="respuesta"/>
-                <h:commandButton class="navbutton" type="reset" value="Ingles" action="reset" /> 
-            </nav>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                <a class="navbar-brand" href="#">
+                    <div class="card" style="width: 8rem;">
+                        <div class="card-body">
+                            <img class="card-img-top" src="img/logo.png" alt="Card image cap"/>
+                        </div>
+                    </div>
+                </a>
         </nav>
-        <div class="container-fluid">
-            <h:form>
-                <h1>Completa el formulario de pago: </h1>
+        
+        <h:form>
+            
+            <div class="card" style="width: 30rem;">
+                <div class="card-body">
+                    
+                    <h4 class="mb-3">Payment</h4>
+
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <h:selectOneRadio value = "#{log.credit}">
+                                <f:selectItem itemValue = "Credit Card" itemLabel = "Credit Card" />
+                                <f:selectItem itemValue = "Debit card" itemLabel = "Debit card" />
+                                <f:selectItem itemValue = "Paypal" itemLabel = "Paypal" />
+                            </h:selectOneRadio> 
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h:outputText value="Nombre de el titular de la tarjeta"/>
+                            <h:inputText id="nameCard" 
+                                         value="#{log.nameCard}"
+                                         required="true"
+                                         requiredMessage="Introduce el nombre de tarjeta"/>
+
+                            <h:outputText value="Numero de tarjeta de credito"/>
+                            <h:inputText id="numberCard" 
+                                         value="#{log.numberCard}"
+                                         required="true"
+                                         requiredMessage="Introduce el numero de tarjeta"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h:outputText value="Fecha de expiración"/>
+                            <h:inputText id="expiracion" 
+                                         value="#{log.expiracion}"
+                                         required="true"
+                                         requiredMessage="Introduce la fecha de Expiración"/>
+
+                            <h:outputText value="Numero de tarjeta de credito"/>
+                            <h:inputText id="cvv" 
+                                         value="#{log.cvv}"
+                                         required="true"
+                                         requiredMessage="Introduce el CVV"/>
+                        </div>
+                    </div>
+                    
+                    /**/
+                    <h:inputText id="cpu" 
+                                 value="#{log.cpu}"
+                                 style="display:none;"/>
+                    <h:inputText id="cpumodel" 
+                               value="#{log.cpumodel}"
+                                 style="display:none;"/>
+                    <h:inputText id="marca" 
+                                  value="#{log.marca}"
+                                  style="display:none;"/>
+                     <h:inputText id="capacidadRam" 
+                                  value="#{log.capacidadRam}"
+                                  style="display:none;"/>
+                     <h:inputText id="formato" 
+                                  value="#{log.ramFormato}"
+                                  style="display:none;"/>
+                    <h:inputText id="tecnologia" 
+                                   value="#{log.tecnologia}"
+                                   style="display:none;"/>
+                    <h:inputText id="almacenamiento" 
+                                 value="#{log.almacenamiento}"
+                                 style="display:none;"/>
+                    /**/
+                    
+                    <hr class="mb-4"/>
+                    <h:commandLink class="btn btn-primary" action="resume">Configurar</h:commandLink>
                 
-                <div class="p-field p-grid">
-                    <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Cantidad" />
-                    <div class="p-col" value="">
-                        <h:inputText id="amount" value="#{log.amount}"/>
-                    </div>
                 </div>
-                <div class="p-field p-grid">
-                    <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Nº Tarjeta" />
-                    <div class="p-col">
-                        <h:inputText id="card" value="#{log.card}"/>
-                    </div>
-                </div>
-                <div class="p-field p-grid">
-                    <h:outputLabel styleClass="p-col-fixed" style="width:100px" value="Fecha Caducidad(mm/YY)" />
-                    <div class="p-col">
-                        <h:inputText id="caducity" value="#{log.caducity}"/>
-                    </div>
-                </div>
-                <p></p>
-                <h:commandButton class="" type="submit" value="Pagar" action="resume" />
-            </h:form>
-        </div>
+            </div>
+                
+        </h:form>
+        
     </body>  
+    
 </html>

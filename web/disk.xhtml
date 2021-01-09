@@ -36,19 +36,41 @@
                     
                     <p></p>
                     
-                    <h:selectOneMenu value="#{cpu}">
-                        <f:selectItem itemValue="1" itemLabel="AMD Socket AM4"/>
-                        <f:selectItem itemValue="2" itemLabel="Intel Socket LGA 1200 10 Gen" />
+                    <h:outputLabel value="Tecnología de disco duro: "/>
+                    
+                    <p></p>
+                    
+                    <h:selectOneMenu value="#{log.tecnologia}">
+                        <f:selectItem itemValue="ssd" itemLabel="ssd"/>
+                        <f:selectItem itemValue="hdd" itemLabel="hdd" />
                     </h:selectOneMenu>
                     
                     <p></p>
-                    <h:outputLabel value="Procesador: "/>
-                    <h:selectOneRadio value = "#{cpumodel}">
-                        <f:selectItem itemValue = "1" itemLabel = "i3" />
-                        <f:selectItem itemValue = "2" itemLabel = "i5" />
-                        <f:selectItem itemValue = "3" itemLabel = "i7" />
+                    
+                    <h:outputLabel value="Almacenamiento "/>
+                    <h:selectOneRadio value = "#{log.almacenamiento}">
+                        <f:selectItem itemValue = "1 TB" itemLabel = "1 TB" />
+                        <f:selectItem itemValue = "2 TB" itemLabel = "2 TB" />
+                        <f:selectItem itemValue = "4 TB" itemLabel = "4 TB" />
                     </h:selectOneRadio>  
                     
+                    <h:inputText id="cpu" 
+                                 value="#{log.cpu}"
+                                 style="display:none;"/>
+                    <h:inputText id="cpumodel" 
+                               value="#{log.cpumodel}"
+                               style="display:none;"/>
+                    <h:inputText id="marca" 
+                             value="#{log.marca}"
+                             style="display:none;"/>
+                    <h:inputText id="capacidadRam" 
+                                 value="#{log.capacidadRam}"
+                                 style="display:none;"/>
+                    <h:inputText id="formato" 
+                                 value="#{log.ramFormato}"
+                                 style="display:none;"/>
+                    
+                    <h:commandButton id="volver" value="volver" action="index" />
                 </h:form>
             
             </div>
